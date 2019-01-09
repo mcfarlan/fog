@@ -1,38 +1,88 @@
-:root {
-  --overcast-orange: #fc7e0f;
-  --delete-red: #fc1b0f; }
-
-/* Animate and scale logo and playback buttons */
+/* Transitions */
+.lighttext,
+.title,
+div.nav a.navlink.left,
+.centertext a,
+.footer > a,
+.feedcell,
+.episodecell,
+.extendedepisodecell,
+.feedcell img,
+.episodecell img,
+.extendedepisodecell img,
+.caption2,
 svg,
 #tinyhomeimg {
   transition: all 100ms ease-out; }
 
-svg:hover,
-#tinyhomeimg:hover {
+/* Animate and scale logo and playback buttons */
+svg:hover, svg:focus,
+#tinyhomeimg:hover,
+#tinyhomeimg:focus {
   transform: scale(1.05); }
 
+#playcontrols a:hover svg, #playcontrols a:focus svg {
+  color: #000; }
+
 /* Change link color on hover */
-a[href='/account']:hover,
+div.nav a.navlink.left:hover, div.nav a.navlink.left:focus,
 .centertext a:hover,
-.footer > a:hover {
-  filter: brightness(1.3); }
+.centertext a:focus,
+.footer > a:hover,
+.footer > a:focus {
+  color: #333; }
+
+.feedcell,
+.episodecell {
+  height: 81px !important; }
+
+.feedcell:hover, .feedcell:focus,
+.episodecell:hover,
+.episodecell:focus,
+.extendedepisodecell:hover,
+.extendedepisodecell:focus {
+  background-color: rgba(252, 126, 15, 0.65) !important; }
+  .feedcell:hover .caption2, .feedcell:focus .caption2,
+  .episodecell:hover .caption2,
+  .episodecell:focus .caption2,
+  .extendedepisodecell:hover .caption2,
+  .extendedepisodecell:focus .caption2 {
+    color: #fff; }
+    .feedcell:hover .caption2 + .lighttext, .feedcell:focus .caption2 + .lighttext,
+    .episodecell:hover .caption2 + .lighttext,
+    .episodecell:focus .caption2 + .lighttext,
+    .extendedepisodecell:hover .caption2 + .lighttext,
+    .extendedepisodecell:focus .caption2 + .lighttext {
+      color: #333; }
+  .feedcell:hover img, .feedcell:focus img,
+  .episodecell:hover img,
+  .episodecell:focus img,
+  .extendedepisodecell:hover img,
+  .extendedepisodecell:focus img {
+    filter: grayscale(1); }
+  .feedcell:hover.usernewepisode .title, .feedcell:focus.usernewepisode .title,
+  .episodecell:hover.usernewepisode .title,
+  .episodecell:focus.usernewepisode .title,
+  .extendedepisodecell:hover.usernewepisode .title,
+  .extendedepisodecell:focus.usernewepisode .title {
+    color: #000; }
 
 /* Delete button hover */
 .destructivebutton:hover {
-  background: var(--delete-red);
-  color: white; }
+  background: #fc1b0f;
+  color: #fff; }
 
 /* Save/Subscribe button hover */
 form[action^='/podcasts/add/'] > .ocborderedbutton:hover,
 #save_episode_button:hover {
-  background: var(--overcast-orange);
+  background: #fc7e0f;
   filter: brightness(1);
   /* Override brightness increase from other links */
-  color: white; }
+  color: #fff; }
 
 /* Selection on podcast search */
 .autocomplete_result:hover h4 {
-  color: var(--overcast-orange); }
+  color: #fc7e0f; }
 
 /* Pixel adjustment to playback speed controls */
 #speedcontrolbackground {
