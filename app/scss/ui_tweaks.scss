@@ -1,0 +1,109 @@
+/* Colours */
+$orange: #fc7e0f;
+$red: #fc1b0f;
+$dark: #333;
+
+/* Transitions */
+.lighttext,
+.title,
+div.nav a.navlink.left,
+.centertext a,
+.footer > a,
+.feedcell,
+.episodecell,
+.extendedepisodecell,
+.feedcell img,
+.episodecell img,
+.extendedepisodecell img,
+.caption2,
+svg,
+#tinyhomeimg {
+  transition: all 100ms ease-out;
+}
+
+
+/* Animate and scale logo and playback buttons */
+svg,
+#tinyhomeimg {
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
+}
+
+#playcontrols {
+  a {
+    &:hover,
+    &:focus {
+      svg {
+        color: #000;
+      }
+    }
+  }
+}
+
+/* Change link color on hover */
+div.nav a.navlink.left,
+.centertext a,
+.footer > a {
+  &:hover,
+  &:focus {
+    color: #333;
+  }
+}
+
+/* Adjusts height for items in feeds due to a 1px variance between the cell height and the episode/podcast cover img */
+.feedcell,
+.episodecell {
+  height: 81px !important;
+}
+
+/* Lists of episodes and feed hover events; includes single podcast view */
+.feedcell,
+.episodecell,
+.extendedepisodecell {
+  &:hover,
+  &:focus {
+    background-color: rgba($orange, 0.65) !important;
+
+    .caption2 {
+      color: #fff;
+
+      & + .lighttext {
+        color: $dark;
+      }
+    }
+
+    img {
+      filter: grayscale(1);
+    }
+  
+    &.usernewepisode .title {
+      color: #000;
+    }
+  }
+}
+
+/* Delete button hover */
+.destructivebutton:hover {
+  background: $red;
+  color: #fff;
+}
+
+/* Save/Subscribe button hover */
+form[action^='/podcasts/add/'] > .ocborderedbutton:hover,
+#save_episode_button:hover {
+  background: $orange;
+  filter: brightness(1); /* Override brightness increase from other links */
+  color: #fff;
+}
+
+/* Selection on podcast search */
+.autocomplete_result:hover h4 {
+  color: $orange;
+}
+
+/* Pixel adjustment to playback speed controls */
+#speedcontrolbackground {
+  padding-top: 2px;
+}
