@@ -1,3 +1,4 @@
+/* Colours */
 /* Transitions */
 .lighttext,
 .title,
@@ -32,10 +33,12 @@ div.nav a.navlink.left:hover, div.nav a.navlink.left:focus,
 .footer > a:focus {
   color: #333; }
 
+/* Adjusts height for items in feeds due to a 1px variance between the cell height and the episode/podcast cover img */
 .feedcell,
 .episodecell {
   height: 81px !important; }
 
+/* Lists of episodes and feed hover events; includes single podcast view */
 .feedcell:hover, .feedcell:focus,
 .episodecell:hover,
 .episodecell:focus,

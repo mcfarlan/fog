@@ -1,3 +1,4 @@
+/* Colours */
 $orange: #fc7e0f;
 $red: #fc1b0f;
 $dark: #333;
@@ -51,11 +52,13 @@ div.nav a.navlink.left,
   }
 }
 
+/* Adjusts height for items in feeds due to a 1px variance between the cell height and the episode/podcast cover img */
 .feedcell,
 .episodecell {
   height: 81px !important;
 }
 
+/* Lists of episodes and feed hover events; includes single podcast view */
 .feedcell,
 .episodecell,
 .extendedepisodecell {
