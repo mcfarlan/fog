@@ -12,11 +12,12 @@
   },
   "main": "main.js",
   "scripts": {
-    "start": "electron main.js",
+    "start": "npm run build-css && electron main.js",
     "build": "npm run build-macos",
     "build-macos": "electron-builder --dir",
     "package": "npm run package-macos",
-    "package-macos": "electron-builder"
+    "package-macos": "electron-builder",
+    "build-css": "node-sass --include-path scss scss/ui_tweaks.scss css/ui_tweaks.css"
   },
   "repository": {
     "type": "git",
@@ -36,7 +37,9 @@
   "homepage": "https://github.com/vitorgalvao/fog",
   "devDependencies": {
     "electron": "^1.8.2",
-    "electron-builder": "^20.2.0"
+    "electron-builder": "^20.2.0",
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.9"
   },
   "dependencies": {
     "electron-window-state": "^4.1.1",

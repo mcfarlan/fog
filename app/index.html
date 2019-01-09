@@ -45,9 +45,9 @@
         // Inject CSS overrides into webview
         const fs = require('fs');
         const sweetalert_css = fs.readFileSync(__dirname + '/css/sweetalert.css', 'utf8');
-        const fog_overrides_css = fs.readFileSync(__dirname + '/css/fog-overrides.css', 'utf8');
+        const ui_tweaks = fs.readFileSync(__dirname + '/css/ui_tweaks.css', 'utf8');
         this.insertCSS(sweetalert_css);
-        this.insertCSS(fog_overrides_css);
+        this.insertCSS(ui_tweaks);
       });
 
       // Try to force a sync before closing
